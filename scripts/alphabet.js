@@ -1,10 +1,5 @@
-// dom
-const input = document.querySelector("#input");
-const output = document.querySelector("#output");
-const translate = document.querySelector("#button");
-
-const alphabet = {
-    //.toLowerCase
+export const alphabet = {
+    // remember .toLowerCase
     a: ".-",
     b: "-...",
     c: "-.-.",
@@ -42,11 +37,3 @@ const alphabet = {
     9: "----.",
     0: "-----",
 };
-
-translate.addEventListener("click", () => {
-    text = input.value.toLowerCase().split(""); // split "" between every character in text
-    for (i = 0; i < text.length; i++) {
-        text[i] = alphabet[text[i]];
-    }
-    output.value = text.join(" ");
-});
