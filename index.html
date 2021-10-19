@@ -1,40 +1,35 @@
-<!-- https://morsecode.world/international/translator.html -->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./styling/style.css" />
         <title>morse code translator</title>
     </head>
     <body>
         <div id="container">
             <section>
                 <h1>morse code translator</h1>
-                <!-- <label for="input">enter text:</label> -->
-                <br />
+                <p></p>
                 <textarea
                     name="input"
                     id="input"
+                    class="text-field"
                     placeholder="enter text"
+                    required
                 ></textarea>
-                <br />
-                <button id="button">translate</button>
-                <br />
+                <button id="toMorse">to morse</button>
+                <button id="toEnglish">to english</button>
+                <button id="btnClear">clear</button>
 
-                <!-- <label for="output">translation:</label> -->
-                <br />
-                <textarea
-                    name="output"
-                    id="output"
-                    placeholder="translation"
-                ></textarea>
+                <div id="outputContainer">
+                    <div class="text-field" id="output"></div>
+                </div>
             </section>
         </div>
         <!--  -->
-        <script src="./script.js"></script>
+        <script src="./scripts/main.js" type="module"></script>
     </body>
 
     <footer>
