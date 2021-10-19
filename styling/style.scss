@@ -1,0 +1,22 @@
+@use "./partials/palette";
+@use "./modules/scrollbar.scss";
+@use "./modules/container.scss";
+@use "./modules/footer.scss";
+@use "./modules/elements.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    background: palette.$background;
+}
+
+h1 {
+    color: palette.$title;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}

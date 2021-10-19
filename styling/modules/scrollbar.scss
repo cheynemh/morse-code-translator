@@ -1,0 +1,10 @@
+@use "../partials/palette";
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    &-thumb {
+        background: palette.$white;
+        border: 2px solid palette.$grey;
+    }
+}

@@ -1,31 +1,25 @@
-import { alphabet } from "./alphabet.js";
-// import { morse } from "./morse.js";
-import { translate } from "./translateToMorse.js";
+import { toMorse, toEnglish } from "./translate.js";
 
-// dom
-const input = document.querySelector("#input");
-const output = document.querySelector("#output");
-const translateButton = document.querySelector("#translateButton");
-const clear = document.querySelector("#clearButton");
+const translateToMorse = document.querySelector("#toMorse");
+const translateToEnglish = document.querySelector("#toEnglish");
 
-// translate.addEventListener("click", () => {
-//     let text = input.value.toLowerCase().split(""); // split "" between every character in inputted text
-//     for (let i = 0; i < text.length; i++) {
-//         text[i] = alphabet[text[i]];
-//     }
-//     output.value = text.join(" "); // join between morse characters
-// });
+translateToMorse.addEventListener("click", () => {
+    let input = document.querySelector("#input").value;
+    let output = document.querySelector("#output");
 
-submit.addEventListener("click", () => {
-    let inputText = document.querySelector("#input");
-    let translatedText = translate(inputText.value);
-    document.querySelector("#output").innerHTML = translatedText;
+    output.innerHTML = toMorse(input);
 });
 
-clearInput.addEventListener("click", () => {
-    input.value = "";
+translateToEnglish.addEventListener("click", () => {
+    let input = document.querySelector("#input").value;
+    let output = document.querySelector("#output");
+
+    output.innerHTML = toEnglish(input);
 });
 
-clearOutput.addEventListener("click", () => {
-    output.value = "";
+let btnClear = document.querySelector("#btnClear");
+let inputs = document.querySelectorAll(".text-field");
+
+btnClear.addEventListener("click", () => {
+    inputs.forEach((input) => (input.value = ""));
 });
