@@ -1,0 +1,49 @@
+@use "../partials/palette";
+
+textarea {
+    background: palette.$inputBg;
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    border: none;
+    // @extend body;
+    &:focus {
+        outline: none;
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+#input,
+#output {
+    @extend textarea;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    max-height: 250px;
+    // overflow: hidden;
+}
+
+#output {
+    background: palette.$outputBg;
+}
+
+button {
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: palette.$buttonBg;
+    color: palette.$buttonText;
+    border: none;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: all ease 0.2s;
+
+    &:hover {
+        color: palette.$buttonHover;
+    }
+}

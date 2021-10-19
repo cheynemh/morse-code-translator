@@ -16,3 +16,10 @@ translateToEnglish.addEventListener("click", () => {
 
     output.innerHTML = toEnglish(input);
 });
+
+let btnClear = document.querySelector("#btnClear");
+let inputs = document.querySelectorAll(".text-field");
+
+btnClear.addEventListener("click", () => {
+    inputs.forEach((input) => (input.value = ""));
+});
